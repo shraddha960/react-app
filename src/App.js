@@ -5,12 +5,11 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
 import About from "./components/About";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch
-// } from "react-router-dom";
-// // import { Router ,Routes, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 function App() {
 
@@ -55,7 +54,7 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
       {/* <ul>
             <li>
               <Link to="/">Home</Link>
@@ -68,16 +67,16 @@ function App() {
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} toggleModeGreen={toggleModeGreen}/>
         {alert && <Alert alert={alert}/>}
         <div className="container my-3">
-        {/* <Switch> */}
-            {/* <Route exact path="/about"> */}
-              {/* <About /> */}
-            {/* </Route> */}
-            {/* <Route exact path='/'> */}
+        <Switch>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path='/'>
               <TextForm heading="Enter the text" mode={mode}/>
-            {/* </Route> */}
-        {/* </Switch> */}
+            </Route>
+        </Switch>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
